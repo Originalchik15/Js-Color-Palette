@@ -1,3 +1,4 @@
+/* --- bw --- */
 body.gradient-black-white {
   min-height: 100vh;
   margin: 0;
@@ -11,18 +12,33 @@ body.gradient-black-white {
   
 }
 
+/* --- cranberry --- */
+/* @keyframes krutoi-gradient{
+  0%  {background: linear-gradient(to bottom right, #7A1E33, #D7485C, #F8C0C8);}
+  25% {background: linear-gradient(to bottom right, #F8C0C8,#7A1E33,#D7485C);}
+  50% {background: linear-gradient(to bottom right, #D7485C,#F8C0C8,#7A1E33);}
+  100%  {background: linear-gradient(to bottom right, #7A1E33, #D7485C, #F8C0C8);}
+} */
+
 body.gradient-cranberry-punch{
   min-height: 100vh;
   margin: 0;
   background: linear-gradient(to bottom right, #7A1E33, #D7485C, #F8C0C8);
+  
 }
 
 .btn.gradient-cranberry-punch{
-  background: linear-gradient(to bottom right, #7A1E33, #D7485C, #F8C0C8);
+  background: grey;
   color: white;
   border-color: rgba(255, 255, 255, 0.325);
+  transition-duration: 0.4s;
 }
 
+.btn.gradient-cranberry-punch:hover{
+  background:linear-gradient(to bottom right, #7A1E33, #D7485C, #F8C0C8);
+}
+
+/* --- velvet --- */
 body.gradient-velvet-night{
   min-height: 100vh;
   margin: 0;
@@ -30,47 +46,98 @@ body.gradient-velvet-night{
 }
 
 .btn.gradient-velvet-night{
-  background: linear-gradient(to bottom right, #9A6FB0, #4B2C5E, #0F0F3E);
+  background: grey;
   color: white;
   border-color: rgba(255, 255, 255, 0.325);
+  transition-duration: 0.4s;
 }
 
+.btn.gradient-velvet-night:hover{
+  background: linear-gradient(to bottom right, #9A6FB0, #4B2C5E, #0F0F3E);
+}
+/* --- azure --- */
 body.gradient-azure-orchid{
   min-height: 100vh;
   margin: 0;
   background: linear-gradient(to bottom right, #9263A5, #7D9FCF, #C4E7F2);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient{
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .btn.gradient-azure-orchid{
-  background: linear-gradient(to bottom right, #9263A5, #7D9FCF, #C4E7F2);
+  background: grey;
   color: white;
   border-color: rgba(255, 255, 255, 0.325);
+  transition-duration: 0.4s;
 }
 
-body.gradient-golden-horizon{
+.btn.gradient-azure-orchid:hover{
+  background: linear-gradient(to bottom right, #9263A5, #7D9FCF, #C4E7F2);
+}
+
+/* --- golden --- */
+body.gradient-golden-horizon {
   min-height: 100vh;
   margin: 0;
   background: linear-gradient(to bottom right, #FFE4B5, #C28840, #5A3F37);
+  position: relative;
+  overflow: hidden;
+}
+
+body.gradient-golden-horizon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("https://c4.wallpaperflare.com/wallpaper/560/749/318/earth-sunset-cloud-golden-wallpaper-preview.jpg")
+              center/cover no-repeat;
+  opacity: 0.1;
+  pointer-events: none;
 }
 
 .btn.gradient-golden-horizon{
-  background: linear-gradient(to bottom right, #FFE4B5, #C28840, #5A3F37);
+  background: grey;
   color: white;
   border-color: rgba(255, 255, 255, 0.325);
+  transition-duration: 0.4s;
 }
 
+.btn.gradient-golden-horizon:hover{
+  background: linear-gradient(to bottom right, #FFE4B5, #C28840, #5A3F37);
+}
+
+/* --- matcha --- */
 body.gradient-midnight-matcha{
   min-height: 100vh;
   margin: 0;
   background: linear-gradient(to bottom right, #B6D3C1, #3C5F56, #0F1E1A);
 }
 
+
+
 .btn.gradient-midnight-matcha{
-  background: linear-gradient(to bottom right, #B6D3C1, #3C5F56, #0F1E1A);
+  background: grey;
   color: white;
   border-color: rgba(255, 255, 255, 0.325);
+  transition-duration: 0.4s;
 }
 
+.btn.gradient-midnight-matcha:hover{
+  background: linear-gradient(to bottom right, #B6D3C1, #3C5F56, #0F1E1A);
+}
+
+/* --- Other --- */
 
 .transparent-outline {
   width: 260px;              
@@ -89,4 +156,102 @@ body.gradient-midnight-matcha{
   text-align: center;
 
   word-break: break-word;
+}
+
+.two-blocks {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;                       
+  margin-top: 30px;               
+  max-width: 900px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.block-size-left{
+  height:300px;
+  width: 350px;
+  text-align: left;
+  word-break: center;
+}
+
+.block-size-right{
+  height:400px;
+  width: 400px;
+  text-align: left;
+  word-break: center;
+}
+
+.btn.btnsmth{
+  width: 150px;              
+  height: 40px;
+  border: 2px solid rgba(128,128,128,0.8); 
+  border-radius: 20px;       
+  background: rgba(255, 255, 255, 0.20);  
+  margin: 20px auto 0;      
+  padding: 16px;             
+  box-sizing: border-box;
+
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  word-break: break-word;
+}
+
+.btn.btnsmth::placeholder{
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.text.textcenter{
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.autorisation-block{
+  margin-top: 40px;
+}
+
+.simple-table {
+  width: 100%;
+  border-collapse: collapse; 
+  color: #fff;
+  text-align: center;
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.20); 
+}
+
+.simple-table th,
+.simple-table td {
+  border: 1px solid rgba(128,128,128,0.8); 
+  padding: 10px;
+}
+
+.simple-table input{
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: white;
+  text-align: center;
+  outline: none;
+}
+
+.white-mutniy::placeholder{
+  color: rgba(255, 255, 255, 0.6);
+}
+
+
+.step.left{
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+.step.right{
+  margin-top: 40px;
+  margin-right: 40px;
 }
