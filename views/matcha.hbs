@@ -5,8 +5,44 @@
 
 <div class="transparent-outline">
   <div>
-    Абсолютно радномный текст на мутном квадрате со 
-    сглаженными углами на красивом фоне.
-    Велосипед. Собака. Водогрязеторфопарафинолечение.
+    Приятный градиент из оттенков зелёного. Страница имеет слайдер который можно перемещать.<br>
+    Так же под слайдером распологаются симметрично расставленные кнопочки которые пересылают на другую страницу
   </div>
+</div>
+
+<div class="slidecontainer">
+  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+</div>
+
+<script>
+  const slider = document.getElementById("myRange");
+
+  function updateSliderColor() {
+    const value = slider.value;
+
+    const red = Math.min(255, 510 - value * 5.1);  
+    const green = Math.min(255, value * 5.1);   
+    const blue = 100;                               
+
+    slider.style.setProperty("--thumb-color", `rgb(${red}, ${green}, ${blue})`);
+
+
+    slider.style.background = `linear-gradient(to right, rgb(${red}, ${green}, ${blue}) ${value}%, #d3d3d3 ${value}%)`;
+  }
+
+  updateSliderColor();
+  slider.addEventListener("input", updateSliderColor);
+</script>
+<div class="two-blocks">
+  <a href="/cranberry" class="btn btnsmth gradient-cranberry-punch">Cranberry</a>
+  <a href="/velvet" class="btn btnsmth gradient-velvet-night">Velvet</a>
+</div>
+
+<div class="two-blocks">
+  <a href="/azure" class="btn btnsmth gradient-azure-orchid">Azure</a>
+  <a href="/golden" class="btn btnsmth gradient-golden-horizon">Golden</a>
+</div>
+
+<div class="autorisation-block">
+  <a href="/matcha" class="btn btnsmth gradient-midnight-matcha">Midnight</a>
 </div>
